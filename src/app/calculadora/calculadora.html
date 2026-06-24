@@ -1,0 +1,45 @@
+<div class="container mb-3">
+  <div class="card text-primary text-center">
+    <div class="card-header">
+      <h2 class="card-title">{{ titulo }}</h2>
+    </div>
+    <div class="card-body text-succes">
+      <form>
+        <div class="mb-3">
+          <label for="numeroUno" class="form-label">Numero 1</label>
+          <input
+            type="number"
+            class="form-control text-center text-primary"
+            id="numeroUno"
+            min="1"
+            max="100"
+            placeholder="5"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="numeroDos" class="form-label">Numero 2</label>
+          <input
+            type="number"
+            class="form-control text-center text-primary"
+            id="numeroDos"
+            min="1"
+            max="100"
+            placeholder="5"
+          />
+        </div>
+
+        <div class="mb-3 text-center">
+          <button type="button" class="btn btn-outline-primary" (click)="sumar()">Sumar</button>
+          <button type="button" class="btn btn-outline-success" (click)="restar()">Restar</button>
+          <button type="button" class="btn btn-outline-danger" (click)="multiplicar()">Multiplicar</button>
+          <button type="button" class="btn btn-outline-warning" (click)="dividir()">Dividir</button>
+
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-info">
+      Aqui aparecra el resultado de las operaciones = {{ resultado }}
+    </div>
+  </div>
+</div>

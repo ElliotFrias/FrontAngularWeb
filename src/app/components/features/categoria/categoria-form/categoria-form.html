@@ -1,0 +1,51 @@
+<div class="mb-3"></div>
+<div class="container">
+  <div class="card border-success">
+    <div class="card border-success">
+      <div class="card-header text-primary text-center">
+        <h2 class="card-title">
+          {{titulo}}
+        </h2>
+      </div>
+      <div class="card-body text-primary">
+        <form>
+          <div class="mb-3">
+            <label for="nombreCategoria" class="form-label">Nombre de la categoria</label>
+            <input
+              type="text"
+              id="nombreCategoria"
+              name="nombreCategoria"
+              placeholder="Nombre de la categoria"
+              class="form-control"
+              maxlength="50"
+              [(ngModel)]="laCategoria().nombreCategoria"
+              />
+          </div>
+
+          <div class="mb-3">
+            <label for="descripcionCategoria" class="form-label">Descripcion de la categoria</label>
+            <input
+              type="text"
+              id="descripcionCategoria"
+              name="descripcionCategoria"
+              placeholder="Descripcion de la categoria"
+              class="form-control"
+              maxlength="100"
+              [(ngModel)]="laCategoria().descripcionCategoria"
+              />
+          </div>
+          @if (laCategoria().idCategoria != 0){
+          <div class="mb-3">
+            <button type="button" (click)="actualizarCategoria()" class="btn btn-outline-success form-control">Actualizar Categoria</button>
+          </div>
+        } @else {
+          <div class="mb-3">
+            <button type="button" (click)="registrarCategoria()" class="btn btn-outline-primary form-control">Registrar Categoria</button>
+          </div>
+
+        }
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
